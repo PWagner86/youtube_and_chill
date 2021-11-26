@@ -8,6 +8,9 @@ function App() {
     <div className="App">
       <Header/>
       <PlayerContainer/>
+      <form action="../../post" method="post">
+        <button type="submit">Connected?</button>
+      </form>
     </div>
   );
 }
