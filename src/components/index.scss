@@ -1,5 +1,6 @@
 @use './style_helper/' as *;
 @use './header/header';
+@use './PlayerContainer/playerContainer';
 
 *, *::before, *::after{
     margin: 0;
@@ -11,3 +12,14 @@ body{
     font-family: $mainFont;
 }
 
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+}

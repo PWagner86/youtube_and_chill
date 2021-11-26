@@ -1,0 +1,7 @@
+@use '../style_helper/' as *;
+
+.main-container{
+    height: 80vh;
+    width: 100%;
+    @include flex(center, center, row);
+}

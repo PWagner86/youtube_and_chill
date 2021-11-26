@@ -11,6 +11,15 @@
   font-size: 6vmin;
 }
 
+.main-container {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -19,6 +28,18 @@
 
 body {
   font-family: "M PLUS 1 Code", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */
