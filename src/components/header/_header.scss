@@ -1,0 +1,11 @@
+@use '../style_helper/' as *;
+
+.main-header{
+    width: 100%;
+    height: 20vh;
+    @include flex(center, center, row);
+}
+
+.main-header .main-title{
+    font-size: 6vmin;
+}
