@@ -21,6 +21,6 @@ const _onReady = (e: any) => {
 export const Player = () => {
     return (
         <YouTube videoId="YBYI7E2PqWE" opts={opts} onReady={_onReady} />
-    )
+    )   
 
 };

@@ -20,6 +20,20 @@
   flex-direction: row;
 }
 
+.controles {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.controles .play {
+  padding: 1rem 2rem;
+  font-size: 4vmin;
+  font-weight: bold;
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -40,6 +54,7 @@ a {
 
 button {
   cursor: pointer;
+  font-family: "M PLUS 1 Code", sans-serif;
 }
 
 /*# sourceMappingURL=index.css.map */

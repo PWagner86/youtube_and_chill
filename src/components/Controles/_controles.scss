@@ -1,0 +1,12 @@
+@use '../style_helper/' as *;
+
+.controles{
+    width: 50%;
+    @include flex(center, center, row);
+}
+
+.controles .play{
+    padding: 1rem 2rem;
+    font-size: 4vmin;
+    font-weight: bold;
+}

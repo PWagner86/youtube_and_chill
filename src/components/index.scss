@@ -1,6 +1,7 @@
 @use './style_helper/' as *;
 @use './header/header';
 @use './PlayerContainer/playerContainer';
+@use './Controles/controles';
 
 *, *::before, *::after{
     margin: 0;
@@ -22,4 +23,5 @@ a{
 
 button{
     cursor: pointer;
+    font-family: $mainFont;
 }
