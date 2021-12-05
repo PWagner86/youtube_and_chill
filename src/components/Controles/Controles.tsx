@@ -6,20 +6,26 @@ export const Controles = () => {
 
   const [socket, setSocket]: any = useState();
 
-  const clickPlay = () => {
-    socket.on('click-event', () => {
-        console.log('Play-Button clicked');
-    })
-  }  
-
   useEffect(() => {
-    const s: any = io('http://localhost:3001');
-    setSocket(s);   
+    const s: Socket = io('http://localhost:3001');
+    setSocket(s); 
+    s.on('connect', () => {
+      console.log(s.io.opts.hostname, s.io.opts.port);
+    })
+
+    // s.on('hello', arg => {
+    //   console.log(arg);
+    // })
 
     return () => {
       s.disconnect();
     }
   }, []) 
+
+  const clickPlay = () => {
+    socket.emit('click-event', 'Play-Button clicked');
+  }  
+  
 
   return (
       <div className="controles">
@@ -32,6 +38,8 @@ export const Controles = () => {
   )
 
 };
+
+
 
 
 
