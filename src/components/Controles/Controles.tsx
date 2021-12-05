@@ -6,31 +6,35 @@ export const Controles = () => {
 
   const [socket, setSocket]: any = useState();
 
+  const clickPlay = () => {
+    socket.on('click-event', () => {
+        console.log('Play-Button clicked');
+    })
+  }  
 
   useEffect(() => {
     const s: any = io('http://localhost:3001');
-    setSocket(s);
+    setSocket(s);   
 
     return () => {
       s.disconnect();
     }
   }, []) 
 
+  return (
+      <div className="controles">
+          <button 
+              className="play"
+              onClick={ clickPlay }
+          >Play</button>
+          
+      </div>
+  )
 
-
-    return (
-        <div className="controles">
-            <button 
-                className="play"
-                onClick={ clickPlay(socket) }
-            >Play</button>
-            
-        </div>
-    )
 };
 
-const clickPlay = (socket: any): any => {
-    socket.on('click-event', () => {
-        console.log('Play-Button clicked');
-    })
-}
+
+
+
+
+
